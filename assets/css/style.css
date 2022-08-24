@@ -540,3 +540,48 @@ body {
   right: 50px;
   bottom: 50px;
 }
+
+
+
+/* стили для слайдера swiper */
+
+.image-slider {
+  padding: 30px 0 70px 0;
+}
+
+.image-slider{
+}
+.swiper__container {
+}
+.image-slider__wrapper {
+}
+.swiper-wrapper {
+}
+.image-slider__slide {
+}
+.swiper-slide {
+}
+.image-slider__image {  
+  text-align: center;
+}
+.image-slider__image img {
+  display: inline-block;
+  max-width: 100%;
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+}
+.image-slider .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: rgb(50, 0, 252);
+}
+.swiper-pagination {
+}
+.swiper-scrollbar {
+}

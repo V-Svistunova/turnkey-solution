@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./assets/img/icon.ico" type="image/x-icon">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
   <title>turnkey-solution</title>
 </head>
 <body>
@@ -109,9 +113,38 @@
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam ea tempore quod odio distinctio ad dicta repudiandae voluptate reprehenderit dolorem delectus quibusdam qui magni officiis aut, suscipit natus. Eveniet?
-          </p>       
-
+          </p>
+          <div class="image-slider swiper">
+            <div class="image-slider__wrapper swiper-wrapper">
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./assets/img/slider/elephant.png" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./assets/img/slider/gorilla.png" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./assets/img/slider/ice_cream.png" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./assets/img/slider/home.png" alt="Картинка">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+  
+            <div class="swiper-pagination"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>       
         </div>
+        
       </div>
       <div class="portfolio" id="portfolio">
         <div class="container">
@@ -138,9 +171,9 @@
        </div>
       </div>
 
-    <a class="go_top" href="#header">
-      <img src="./assets/img/up-arrow.svg" alt="go-top arrows">
-    </a>    
+      <a class="go_top" href="#header">
+        <img src="./assets/img/up-arrow.svg" alt="go-top arrows">
+      </a>    
 
     </main>
     <footer class="footer">
@@ -149,7 +182,7 @@
       </div>
     </footer> 
   </div>
-   
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="./assets/js/main.js"></script> 
 </body>
 </html>

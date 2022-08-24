@@ -7,7 +7,7 @@ navLinks.forEach((elem) => {
   elem.addEventListener('click', function() {
     navLinks.forEach((item) => {
       item.classList.remove('header__link--active'); 
-    })    
+    });    
     elem.classList.add('header__link--active');
   });
 });
@@ -105,3 +105,52 @@ sliderPrev.addEventListener('click', function() {
   }
   sliderLine.style.left = -offset + 'px'
 });
+
+
+
+// Иницилизируем Swiper
+
+var init = false;
+
+function swiperCard() {
+  if (window.innerWidth <= 768) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper('.image-slider' , {
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },      
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        }, 
+        slidesPerView: 5,     
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          400: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        } 
+      });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
+
+
+
+
+
