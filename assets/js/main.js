@@ -203,3 +203,14 @@ async function loadWeather(e) {
 
 
 
+  // Показать ограниченый блок
+
+  let contactsBtn = document.querySelector('.contacts__btn');
+  let contactsText = document.querySelector('.contacts__text');
+
+  contactsBtn.addEventListener('click', function() {
+    contactsText.classList.toggle('contacts__text--active');
+  });
+
+
+
