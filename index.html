@@ -53,7 +53,9 @@
           <h1 class="title">home</h1>   
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p>       
+          </p>  
+          <h6 class="subtitle">Виджет погода</h6>
+          <div class="weather" id="weather"></div>     
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
           </p>
@@ -114,6 +116,9 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam ea tempore quod odio distinctio ad dicta repudiandae voluptate reprehenderit dolorem delectus quibusdam qui magni officiis aut, suscipit natus. Eveniet?
           </p>
+          <h6 class="subtitle">
+            Swiper slider, который появляется только на мобилке
+          </h6>
           <div class="image-slider swiper">
             <div class="image-slider__wrapper swiper-wrapper">
               <div class="image-slider__slide swiper-slide">
@@ -151,7 +156,63 @@
           <h3 class="title">portfolio</h3>
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p>       
+          </p> 
+          <h6 class="subtitle">
+            Табы при помощи псевдоэлемента :target (не кросбраузерно)
+          </h6>          
+          <div class="content">
+            <div class="tabs">
+              <nav class="tabs__items">
+                <a href="#tab" class="tabs__item">
+                  Первая вкладка
+                </a>
+                <a href="#tab_02" class="tabs__item">
+                  Вторая вкладка
+                </a>
+                <a href="#tab_03" class="tabs__item">
+                  Третья вкладка
+                </a>
+              </nav>
+              <div class="tabs__body">
+                <div id="tab" class="tabs__block">
+                  <p class="text">Первая вкладка</p>
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis placeat quis fugiat consectetur et ducimus voluptatem voluptatum sunt nihil officia tenetur fugit, esse libero aspernatur iste possimus nisi. Voluptatibus.
+                  </p>
+                </div>
+                <div id="tab_02" class="tabs__block">
+                  <p class="text">Вторая вкладка</p>
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni non at rem dignissimos eum quasi ipsa minima aperiam. Aliquid tempora reiciendis accusantium impedit consequatur, nam placeat quae? Eos, vitae et!
+                  </p>
+                </div>
+                <div id="tab_03" class="tabs__block">
+                  <p class="text">Третья вкладка</p>
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
+                  </p>
+                </div>
+              </div>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
+              </p> 
+            </div>
+          </div>
+          <div class="details">
+            <h6 class="subtitle">
+              Табы при помощи новых тегов details и summary
+            </h6>
+            <details>
+              <summary>Details</summary>
+              Something small enough to escape casual notice.
+            </details>
+            <details open>
+              <summary>Even more details</summary>
+              <p>Here are even more details about the details.</p>
+            </details>
+          </div>
         </div>
       </div>
       <div class="contacts" id="contacts">

@@ -284,17 +284,76 @@ body {
   font-size: 28px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
-  text-transform: capitalize;
+  text-transform:capitalize;
   text-align: center;
   padding: 20px 0;
 }
-
+.subtitle {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0;
+}
 
 
 .footer {
 	background-color:gainsboro;
   padding: 30px 0;
 }
+
+
+/* Виджет погода */
+
+.weather {
+  background-color: beige;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+.weather__loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather__loading img {
+  max-width: 50px;
+}
+.weather__header {
+  display: flex;
+}
+.weather__main {
+  flex: 1 1 auto
+}
+.weather__city {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.weather__status {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.weather__temp {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.weather__temp::after,
+.weather__feels-like::after {
+  display: inline-block;
+  margin-left: 5px;
+  content: "°C";
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -548,19 +607,6 @@ body {
 .image-slider {
   padding: 30px 0 70px 0;
 }
-
-.image-slider{
-}
-.swiper__container {
-}
-.image-slider__wrapper {
-}
-.swiper-wrapper {
-}
-.image-slider__slide {
-}
-.swiper-slide {
-}
 .image-slider__image {  
   text-align: center;
 }
@@ -568,9 +614,9 @@ body {
   display: inline-block;
   max-width: 100%;
 }
-.swiper-button-prev {
-}
+.swiper-button-prev,
 .swiper-button-next {
+  opacity: 0;
 }
 .image-slider .swiper-button-prev::after,
 .image-slider .swiper-button-next::after {
@@ -581,7 +627,98 @@ body {
   cursor: pointer;
   background-color: rgb(50, 0, 252);
 }
-.swiper-pagination {
+.image-slider__wrapper .swiper-slide {
+  flex-shrink: 1;
 }
-.swiper-scrollbar {
+@media screen and (max-width: 768px) {
+  .image-slider__wrapper .swiper-slide {
+    flex-shrink: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 350px) {
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-disabled,
+  .swiper-button-disabled::after {
+    opacity: 0;
+    background: none;
+  }
+}
+
+
+
+
+
+/* Стили для табов  */
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.tabs {
+  margin: 0 0 50px 0;
+}
+.tabs__items {
+  display: flex;
+}
+.tabs__item {
+  flex: 0 1 33.333%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color:#222;
+  text-decoration: none;
+}
+.tabs__block {
+  padding: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  display: none;
+}
+.tabs__block:target {
+  display: block;
+}
+.tabs__block:nth-child(1){
+  background-color: rgb(202, 130, 238);
+}
+.tabs__block:nth-child(2){
+  background-color: yellow;
+}
+.tabs__block:nth-child(3){
+  background-color: rgb(169, 255, 71);
+}
+
+
+
+
+
+/* стили для нового тега details */
+
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: .5em .5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -.5em -.5em 0;
+  padding: .5em;
+}
+
+details[open] {
+  padding: .5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: .5em;
 }
