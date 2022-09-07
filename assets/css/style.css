@@ -654,20 +654,20 @@ body {
 
 
 
-/* Стили для табов  */
+/* Стили для табов при помощи target - способ 1  */
 
-.content {
-  max-width: 1000px;
+.tab-content {
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 20px 5px;
+  background:#e3f2fd;
 }
-.tabs {
+.content-tabs {
   margin: 0 0 50px 0;
 }
-.tabs__items {
+.content-tabs__items {
   display: flex;
 }
-.tabs__item {
+.content-tabs__item {
   flex: 0 1 33.333%;
   height: 60px;
   display: flex;
@@ -677,25 +677,87 @@ body {
   color:#222;
   text-decoration: none;
 }
-.tabs__block {
+.content-tabs__block {
   padding: 20px;
   font-size: 18px;
   line-height: 24px;
   display: none;
 }
-.tabs__block:target {
+.content-tabs__block:target {
   display: block;
 }
-.tabs__block:nth-child(1){
+.content-tabs__block:nth-child(1){
   background-color: rgb(202, 130, 238);
 }
-.tabs__block:nth-child(2){
+.content-tabs__block:nth-child(2){
   background-color: yellow;
 }
-.tabs__block:nth-child(3){
+.content-tabs__block:nth-child(3){
   background-color: rgb(169, 255, 71);
 }
 
+
+
+/* Стили для табов при помощи target - способ 2  */
+.tab-target {
+  padding: 20px 10px;
+  background-color: #aaa;
+}
+
+.tab-target-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-target-tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+.tab-target-tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+.tab-target-tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+  background-color: #bbdefb;
+  cursor: default;
+}
+
+.tab-target-tabs__links {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  order: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #e3f2fd;
+  box-shadow: 0 2px 4px 0 #e3f2fd;
+}
+
+.tab-target-tabs__links>a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 10px;
+  text-align: center;
+  color: #1976d2;
+}
+
+.tab-target-tabs__links>a:hover {
+  background-color: rgba(227, 242, 253, 0.3);
+}
+
+.tab-target-tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+.tab-target-tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+.tab-target-tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+  background-color: #bbdefb;
+  cursor: default;
+}
+
+.tab-target-tabs>div:not(.tabs__links) {
+  display: none;
+  order: 1;
+}
+
+.tab-target-tabs>div:target {
+  display: block;
+}
 
 
 
@@ -725,12 +787,107 @@ details[open] summary {
 
 
 
+
+/* стили для табов при помощи :checked */
+.tabs-css-tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs-css-tabs>input[type="radio"]:checked+label {
+  font-weight: bold;
+  cursor: default;
+}
+
+.tabs-css-tabs>div {
+  display: none;
+  border-top: 1px solid #eee;
+  padding: 10px 15px;
+}
+
+#tabs-css-tab-btn-1:checked~#tabs-css-content-1,
+#tabs-css-tab-btn-2:checked~#tabs-css-content-2,
+#tabs-css-tab-btn-3:checked~#tabs-css-content-3 {
+  display: block;
+}
+
+.tabs-css-tabs>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: 2px 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out;
+  margin-left: 6px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.tabs-css-tabs>label:first-of-type {
+  margin-left: 0;
+}
+
+
+
+
+
+
+/* табы при помощи js */
+.tabs {
+  border: 1px solid #e0e0e0;
+}
+
+.tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  background: #fafafa;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabs__btn {
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.tabs__btn_active {
+  background: #e0e0e0;
+  cursor: default;
+}
+
+.tabs__btn:not(.tabs__btn_active):hover,
+.tabs__btn:not(.tabs__btn_active):focus {
+  background-color: #eee;
+}
+
+.tabs__content {
+  padding: 1rem;
+}
+
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
+}
+
+
+
+
 /* Обрезаный текст */
 
 .contacts__text {
   height: 58px;
   text-overflow: ellipsis;
-  
   overflow-y: hidden;
   transition: all 0.3s ease 0s;
 }

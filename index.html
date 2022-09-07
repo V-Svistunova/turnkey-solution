@@ -156,39 +156,39 @@
           <h3 class="title">portfolio</h3>
           <p class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p> 
-          <h6 class="subtitle">
-            Табы при помощи псевдоэлемента :target (не кросбраузерно)
-          </h6>          
-          <div class="content">
-            <div class="tabs">
-              <nav class="tabs__items">
-                <a href="#tab" class="tabs__item">
+          </p>   
+          <div class="tab-content">
+            <h6 class="subtitle">
+              Табы при помощи псевдоэлемента :target - первый способ (не кросбраузерно)
+            </h6>
+            <div class="content-tabs">
+              <nav class="content-tabs__items">
+                <a href="#tab" class="content-tabs__item">
                   Первая вкладка
                 </a>
-                <a href="#tab_02" class="tabs__item">
+                <a href="#tab_02" class="content-tabs__item">
                   Вторая вкладка
                 </a>
-                <a href="#tab_03" class="tabs__item">
+                <a href="#tab_03" class="content-tabs__item">
                   Третья вкладка
                 </a>
               </nav>
-              <div class="tabs__body">
-                <div id="tab" class="tabs__block">
+              <div class="content-tabs__body">
+                <div id="tab" class="content-tabs__block">
                   <p class="text">Первая вкладка</p>
                   <p class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis placeat quis fugiat consectetur et ducimus voluptatem voluptatum sunt nihil officia tenetur fugit, esse libero aspernatur iste possimus nisi. Voluptatibus.
                   </p>
                 </div>
-                <div id="tab_02" class="tabs__block">
+                <div id="tab_02" class="content-tabs__block">
                   <p class="text">Вторая вкладка</p>
                   <p class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni non at rem dignissimos eum quasi ipsa minima aperiam. Aliquid tempora reiciendis accusantium impedit consequatur, nam placeat quae? Eos, vitae et!
                   </p>
                 </div>
-                <div id="tab_03" class="tabs__block">
+                <div id="tab_03" class="content-tabs__block">
                   <p class="text">Третья вкладка</p>
                   <p class="text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
@@ -200,6 +200,29 @@
               </p> 
             </div>
           </div>
+
+          <div class="tab-target">
+            <h6 class="subtitle">
+              Табы при помощи псевдоэлемента :target - второй способ (не кросбраузерно)
+            </h6>
+            <div class="tab-target-tabs">
+              <div id="content-1">
+                Содержимое 1...
+              </div>
+              <div id="content-2">
+                Содержимое 2...
+              </div>
+              <div id="content-3">
+                Содержимое 3...
+              </div>
+              <div class="tab-target-tabs__links">
+                <a href="#content-1">Вкладка 1</a>
+                <a href="#content-2">Вкладка 2</a>
+                <a href="#content-3">Вкладка 3</a>
+              </div>
+            </div>
+          </div>
+
           <div class="details">
             <h6 class="subtitle">
               Табы при помощи новых тегов details и summary
@@ -213,6 +236,56 @@
               <p>Here are even more details about the details.</p>
             </details>
           </div>
+
+          <div class="tabs-css">
+            <h6 class="subtitle">
+              Табы при помощи :checked - css
+            </h6> 
+            <div class="tabs-css-tabs">
+              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-1" value="" checked>
+              <label for="tabs-css-tab-btn-1">Вкладка 1</label>
+              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-2" value="">
+              <label for="tabs-css-tab-btn-2">Вкладка 2</label>
+              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-3" value="">
+              <label for="tabs-css-tab-btn-3">Вкладка 3</label>
+              <div id="tabs-css-content-1">
+                Содержимое 1...
+              </div>
+              <div id="tabs-css-content-2">
+                Содержимое 2...
+              </div>
+              <div id="tabs-css-content-3">
+                Содержимое 3...
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs-js">
+            <h6 class="subtitle">
+              Табы при помощи js 
+            </h6>
+            
+            <div class="tabs">
+              <div class="tabs__nav">
+                <button class="tabs__btn tabs__btn_active">Вкладка 1</button>
+                <button class="tabs__btn">Вкладка 2</button>
+                <button class="tabs__btn">Вкладка 3</button>
+              </div>
+              <div class="tabs__content">
+                <div class="tabs__pane tabs__pane_show">
+                  Содержимое 1...
+                </div>
+                <div class="tabs__pane">
+                  Содержимое 2...
+                </div>
+                <div class="tabs__pane" id="content-3">
+                  Содержимое 3...
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
       <div class="contacts" id="contacts">
