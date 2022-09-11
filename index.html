@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="shortcut icon" href="./assets/img/icon.ico" type="image/x-icon">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>turnkey-solution</title>
 </head>
 <body>
@@ -294,6 +292,19 @@
         <p class="text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
         </p>
+        <div class="video-box">
+            <div class="plyr__video-embed" id="player">
+              <iframe
+                src="https://www.youtube.com/watch?v=x55lAlFtXmw&ab_channel=Ubisoft"
+                allowfullscreen
+                allowtransparency
+              ></iframe>
+            </div>
+        </div>
+        <div class="video-box">
+          
+        </div>
+
         <p class="contacts__text text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nulla nihil. Reprehenderit blanditiis exercitationem saepe at sapiente explicabo vitae cum, ab eaque! Totam, enim repudiandae quos sapiente tenetur itaque labore!
@@ -316,10 +327,63 @@
     <footer class="footer">
       <div class="container">
         <p>footer</p>
+        <div class="footer_btn btn">
+          <span>Кнопка</span>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum quae recusandae dolor non id. Optio ratione atque nisi omnis, necessitatibus natus dolore totam minima reiciendis aliquam beatae architecto laboriosam.
+        </p>
+        <div class="footer__wrap">
+          <div class="footer_box lesson">
+            <div class="footer_btn button">
+              <span>Кнопка, которая считает себя не такой как все</span>
+            </div>
+            <div class="footer_btn button">
+              <span>Кнопка</span>
+            </div>
+            <div class="footer_btn button">
+              <span>Кнопка</span>
+            </div>
+            <div class="footer_btn button">
+              <span>Кнопка</span>
+            </div>          
+          </div>
+          <div class="footer__box">
+            <a href="https://www.google.ru/" class="footer__link link">
+              <span>Google</span>
+            </a>
+            <nav class="footer__menu menu">
+              <button type="button" class="menu__button">
+                <span>Открыть меню</span>
+                <span>Закрыть меню</span>
+              </button>
+              <ul hidden class="menu__list">
+                <li>
+                  <a href="#" class="menu__link">Пункт 1</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__link">Пункт 2</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__link">Пункт 3</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__link">Пункт 4</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="block-for-mouse">
+            </div>
+          </div>          
+        </div>
+        
       </div>
     </footer> 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
 <script src="./assets/js/main.js"></script> 
 </body>
 </html>

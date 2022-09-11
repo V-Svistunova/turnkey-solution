@@ -909,3 +909,94 @@ details[open] summary {
 .contacts__btn:hover {
   transform: translateY(3px);
 }
+
+
+
+/* video player plyx */
+.video-box {
+  position: relative;  
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* test addeventlistener */
+.footer__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer_btn {
+  max-width: 200px;
+  cursor: pointer;
+  margin: 50px auto;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: steelblue;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 2px outset gray;
+}
+
+
+
+
+/*Выпадающее меню - Делегирование событий*/
+.footer__menu {
+  margin: 20px 0;
+}
+.menu {
+  display: inline-block;
+}
+.menu._active .menu__list {
+  display: block;
+}
+.menu._active .menu__button span:first-child {
+  display: none;
+}
+.menu._active .menu__button span:last-child {
+  display: block;
+}
+.menu__button{
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+}
+.menu__button span:first-child {
+  display: block;
+}
+.menu__button span:last-child {
+  display: none;
+}
+.menu__list {
+  background-color: rgb(90, 120, 149);
+  padding: 15px;
+}
+.menu__link {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid gray;
+}
+.menu__link:hover {
+  color: black;
+}
+
+/*отмена действий по умолчанию*/
+.footer__link span {
+  color: red;
+}
+
+/*Движение мыши*/
+.block-for-mouse {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(116, 221, 116);
+  
+}

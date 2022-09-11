@@ -125,21 +125,7 @@ function swiperCard() {
         scrollbar: {
           el: '.swiper-scrollbar',
         }, 
-        slidesPerView: 5,     
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          400: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          600: {
-            slidesPerView: 3,
-            spaceBetween: 30
-          }
-        } 
+        slidesPerView: 3,
       });
     }
   } else if (init) {
@@ -171,8 +157,8 @@ async function loadWeather(e) {
       getWeater(responseResult);
     }else {
       weatherBlock.innerHTML = responseResult.message;
-    }
-  }
+    };
+  };
 
   function getWeater(data){
     const location = data.name;
@@ -195,11 +181,11 @@ async function loadWeather(e) {
       <div class="weather__feels-like">Feels like: ${feelsLike}</div>`;
 
       weatherBlock.innerHTML = template;
-    }
+    };
 
   if(weatherBlock) {
     loadWeather();
-  }
+  };
 
 
 
@@ -277,3 +263,126 @@ for (let i = 0, length = tabs.length; i < length; i++) {
   */
 
 
+
+/* Video player Plyr */
+
+const player = new Plyr('#player');
+
+
+
+
+
+/* Traine addeventlistener */
+
+
+let btn = document.querySelector('.btn');
+/*
+function showConcole(event) {
+  //Тип собития
+    //console.log(event.type);
+  //Обьект к которому назанчен обработчик
+    //console.log(event.target);
+  //Обьект к которому назанчен обработчик
+    //console.log(event.currentTarget)
+  //Положение курсора по оси Y
+    //console.log(event.clientX);
+  //Положение курсора по оси Y
+    //console.log(event.clientY);
+
+  // Все детали события
+    //console.log(event);
+}
+
+btn.addEventListener('click', showConcole);
+*/
+
+//---------Делегирование событий-----------------
+
+const lesson = document.querySelector('.lesson');
+const button = document.querySelectorAll('button');
+
+function showConcole() {
+  console.log('wow!!');
+}
+/*
+// этот способ не рекомендуют
+button.forEach(buttonItem => {
+  buttonItem.addEventListener('click', showConcole);
+})
+*/
+lesson.addEventListener('click', function(event) {
+  if(event.target.closest('.button')) {
+    showConcole();
+  }
+})
+
+//---------Выпадающее меню---------
+const menuBody = document.querySelector('.menu');
+
+document.addEventListener("click", menu);
+
+function menu(event) {
+  if (event.target.closest('.menu__button')) {
+    menuBody.classList.toggle('_active');
+  }
+  if (!event.target.closest('.menu')) {
+    menuBody.classList.remove('_active');
+  }
+};
+
+//---------Отмена дейтивиz браузера по умолчанию---------
+const link = document.querySelector('.link');
+
+link.addEventListener("click", function(event) {
+  console.log('Наши действия');
+  //Отмена дейтивиz браузера по умолчанию(переход по ссылке)
+  event.preventDefault();
+});
+
+
+//Основны событий мыши
+
+btn.addEventListener("mousedown", function(event) {
+  console.log(`Нажата кнопка ${event.which}`);
+});
+
+btn.addEventListener("click", function(event) {
+  console.log(`Нажата основная кнопка мыши`);
+});
+
+btn.addEventListener("contextmenu", function(event) {
+  console.log(`Вызвано контекстное меню (не основаная кнопка мыши)`);
+});
+/*
+event.which = 1 - Нажата основаная кнопка мыши (обычно левая)
+event.which = 2 - Нажата средняя кнопка мыши (колесо)
+event.which = 1 - Нажата не основаная кнопка мыши (обычно правая)
+*/
+
+//-----Координаты: clientX/Y, pageX/Y---------
+const blockForMouse = document.querySelector('.block-for-mouse');
+
+/*
+blockForMouse.addEventListener("mousemove", function(event) {
+  blockForMouse.innerHTML =
+    `clientX - ${event.clientX} <br> clientY - ${event.clientY}`;
+});
+*/
+/*
+//------Событие mouseover/mouseout, relatedTarget событие не всплывает (переход к дочернему элементу с прыжкоми выход/вход)
+blockForMouse.addEventListener("mouseover", function(event) {
+  blockForMouse.innerHTML = `Курсор над элементом`;
+  //элемент на который пришел
+  console.log(event.target);
+  //элемент на который ушел
+  console.log(event.relatedTarget);
+});
+blockForMouse.addEventListener("mouseout", function(event) {
+  blockForMouse.innerHTML = `Курсор уходит с элемента`;
+    //элемент на который пришел
+    console.log(event.target);
+    //элемент на который ушел
+    console.log(event.relatedTarget);
+});
+*/
+//------Событие mouseenter / mouseleave - событие не всплывает (переход к дочернему элементу не будет)
