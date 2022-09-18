@@ -329,6 +329,11 @@ function menu(event) {
     menuBody.classList.remove('_active');
   }
 };
+document.addEventListener('keyup', function(event) {
+  if (event.code === 'Escape') {
+    menuBody.classList.remove('_active');
+  }
+});
 
 //---------Отмена дейтивиz браузера по умолчанию---------
 const link = document.querySelector('.link');
@@ -386,3 +391,31 @@ blockForMouse.addEventListener("mouseout", function(event) {
 });
 */
 //------Событие mouseenter / mouseleave - событие не всплывает (переход к дочернему элементу не будет)
+
+// Клавиатура
+//event.code u event.key
+
+/*
+document.addEventListener("keydown", function(event) {
+  console.log(`Нажата клавиша ${event.code} ${event.key}`);
+});
+document.addEventListener("keyup", function(event) {
+  console.log(`Отжата клавиша ${event.code} ${event.key}`);
+});
+*/
+
+//Счетчик символов
+
+const txtItem = document.querySelector('.textarea__item');
+const txtItemLimit = txtItem.getAttribute('maxlength');
+const txtCounter = document.querySelector('.textarea__couter span');
+txtCounter.innerHTML = txtItemLimit;
+
+txtItem.addEventListener("keyup", txtSetCounter);
+txtItem.addEventListener("keydown", function(event) {
+  if (event.repeat) txtSetCounter();
+});
+function txtSetCounter() {
+  const txtCounterResult = txtItemLimit - txtItem.value.length;
+  txtCounter.innerHTML = txtCounterResult;
+}
