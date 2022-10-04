@@ -1,397 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/img/icon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>turnkey-solution</title>
-</head>
-<body>
-  <div class="wrapper">
-    <header class="header" id="header">
-      <div class="container">           
-        <div class="header__wrap">
-          <a class="header__logo-link" href="#">
-            <img class="header__logo-img" src="./assets/img/logo.svg" alt="logo brand">
-          </a>
-          <div class="header__burger">
-            <div class="header__btn-menu">
-              <span></span>
-            </div>
-          </div>        
-          <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <a class="header__link header__link--active" href="#home">Home</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#about">About me</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#skills">Skills</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="header__item">
-                <a class="header__link" href="#contacts">Contacts</a>
-              </li>
-            </ul>            
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="home" id="home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>turnkey-solution</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
         <div class="container">
-          <h1 class="title">home</h1>   
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p>  
-          <h6 class="subtitle">Виджет погода</h6>
-          <div class="weather" id="weather"></div>     
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p>
-          <div class="modal-btn">
-            <button class="modalOpen" id="modalOpen">
-              <span>Click me</span>
-            </button>
-          </div>
-          <div class="modal">
-              <div class="modal-wrapper">
-                  <div class="modal-header">
-                      <span class="close-btn">X</span>
-                      <h3>I'm modal window</h3>
-                  </div>
-                  <div class="modal-body">
-                      <img src="./assets/img/logo.svg" alt="">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et reprehenderit architecto dolorem neque quia nostrum iure, vero voluptatem ut recusandae libero exercitationem obcaecati perferendis maiores. Qui pariatur recusandae!
-                      </p>
-                  </div>
-                  <div class="modal-footer">
-                      <h3>Have a nice day!</h3>
-                  </div>
+          <div class="header__wrap">
+            <a class="header__logo-link" href="#">
+              <img
+                class="header__logo-img"
+                src="./assets/img/logo.svg"
+                alt="logo brand"
+              />
+            </a>
+            <div class="header__burger">
+              <div class="header__btn-menu">
+                <span></span>
               </div>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link header__link--active" href="#home"
+                    >Home</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#about">About me</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#skills">Skills</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#contacts">Contacts</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </div>
-      <div class="about" id="about">
-        <div class="container">          
-          <h3 class="title">about</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, tempora facilis fuga dignissimos alias nemo nam, vel molestias, at voluptas animi omnis delectus ratione illum placeat? Voluptates labore natus sed.
-          </p>         
-
-          <div class="slider-container">
-            <h1>Самописаный слайдер</h1>
-            <div class="slider">
-                <div class="slider-line">
-                    <img src="./assets/img/slider/elephant.png" alt="">
-                    <img src="./assets/img/slider/gorilla.png" alt="">
-                    <img src="./assets/img/slider/home.png" alt="">
-                    <img src="./assets/img/slider/ice_cream.png" alt="">
-                </div>
+      </header>
+      <main class="main">
+        <div class="home" id="home">
+          <div class="container">
+            <h1 class="title">home</h1>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe.
+            </p>
+            <h6 class="subtitle">Виджет погода</h6>
+            <div class="weather" id="weather"></div>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe.
+            </p>
+            <div class="modal-btn">
+              <button class="modalOpen" id="modalOpen">
+                <span>Click me</span>
+              </button>
             </div>
+            <div class="modal">
+              <div class="modal-wrapper">
+                <div class="modal-header">
+                  <span class="close-btn">X</span>
+                  <h3>I'm modal window</h3>
+                </div>
+                <div class="modal-body">
+                  <img src="./assets/img/logo.svg" alt="" />
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                    reprehenderit architecto dolorem neque quia nostrum iure,
+                    vero voluptatem ut recusandae libero exercitationem
+                    obcaecati perferendis maiores. Qui pariatur recusandae!
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <h3>Have a nice day!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about" id="about">
+          <div class="container">
+            <h3 class="title">about</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Provident, tempora facilis fuga dignissimos
+              alias nemo nam, vel molestias, at voluptas animi omnis delectus
+              ratione illum placeat? Voluptates labore natus sed.
+            </p>
+
+            <div class="slider-container">
+              <h1>Самописаный слайдер</h1>
+              <div class="slider">
+                <div class="slider-line">
+                  <img src="./assets/img/slider/elephant.png" alt="" />
+                  <img src="./assets/img/slider/gorilla.png" alt="" />
+                  <img src="./assets/img/slider/home.png" alt="" />
+                  <img src="./assets/img/slider/ice_cream.png" alt="" />
+                </div>
+              </div>
               <div class="">
                 <button class="slider-prev">Prev</button>
                 <button class="slider-next">Next</button>
               </div>
             </div>
-
+          </div>
         </div>
-      </div>
-      <div class="skills" id="skills">
-        <div class="container">
-          <h3 class="title">skills</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam ea tempore quod odio distinctio ad dicta repudiandae voluptate reprehenderit dolorem delectus quibusdam qui magni officiis aut, suscipit natus. Eveniet?
-          </p>
-          <h6 class="subtitle">
-            Swiper slider, который появляется только на мобилке
-          </h6>
-          <div class="image-slider swiper">
-            <div class="image-slider__wrapper swiper-wrapper">
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img src="./assets/img/slider/elephant.png" alt="Картинка">
-                </div>
-              </div>
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img src="./assets/img/slider/gorilla.png" alt="Картинка">
-                </div>
-              </div>
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img src="./assets/img/slider/ice_cream.png" alt="Картинка">
-                </div>
-              </div>
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img src="./assets/img/slider/home.png" alt="Картинка">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-  
-            <div class="swiper-pagination"></div>
-            <div class="swiper-scrollbar"></div>
-          </div>       
-        </div>
-        
-      </div>
-      <div class="portfolio" id="portfolio">
-        <div class="container">
-          <h3 class="title">portfolio</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          </p>   
-          <div class="tab-content">
+        <div class="skills" id="skills">
+          <div class="container">
+            <h3 class="title">skills</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ex ullam ea tempore quod odio distinctio ad
+              dicta repudiandae voluptate reprehenderit dolorem delectus
+              quibusdam qui magni officiis aut, suscipit natus. Eveniet?
+            </p>
             <h6 class="subtitle">
-              Табы при помощи псевдоэлемента :target - первый способ (не кросбраузерно)
+              Swiper slider, который появляется только на мобилке
             </h6>
-            <div class="content-tabs">
-              <nav class="content-tabs__items">
-                <a href="#tab" class="content-tabs__item">
-                  Первая вкладка
-                </a>
-                <a href="#tab_02" class="content-tabs__item">
-                  Вторая вкладка
-                </a>
-                <a href="#tab_03" class="content-tabs__item">
-                  Третья вкладка
-                </a>
-              </nav>
-              <div class="content-tabs__body">
-                <div id="tab" class="content-tabs__block">
-                  <p class="text">Первая вкладка</p>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis placeat quis fugiat consectetur et ducimus voluptatem voluptatum sunt nihil officia tenetur fugit, esse libero aspernatur iste possimus nisi. Voluptatibus.
-                  </p>
+            <div class="image-slider swiper">
+              <div class="image-slider__wrapper swiper-wrapper">
+                <div class="image-slider__slide swiper-slide">
+                  <div class="image-slider__image">
+                    <img
+                      src="./assets/img/slider/elephant.png"
+                      alt="Картинка"
+                    />
+                  </div>
                 </div>
-                <div id="tab_02" class="content-tabs__block">
-                  <p class="text">Вторая вкладка</p>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni non at rem dignissimos eum quasi ipsa minima aperiam. Aliquid tempora reiciendis accusantium impedit consequatur, nam placeat quae? Eos, vitae et!
-                  </p>
+                <div class="image-slider__slide swiper-slide">
+                  <div class="image-slider__image">
+                    <img src="./assets/img/slider/gorilla.png" alt="Картинка" />
+                  </div>
                 </div>
-                <div id="tab_03" class="content-tabs__block">
-                  <p class="text">Третья вкладка</p>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident laudantium delectus obcaecati! Quo repellendus in ab impedit provident. Deleniti voluptatem magni eum nobis eaque iure quae aliquam adipisci nam.
-                  </p>
+                <div class="image-slider__slide swiper-slide">
+                  <div class="image-slider__image">
+                    <img
+                      src="./assets/img/slider/ice_cream.png"
+                      alt="Картинка"
+                    />
+                  </div>
+                </div>
+                <div class="image-slider__slide swiper-slide">
+                  <div class="image-slider__image">
+                    <img src="./assets/img/slider/home.png" alt="Картинка" />
+                  </div>
                 </div>
               </div>
-              <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-              </p> 
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
-
-          <div class="tab-target">
-            <h6 class="subtitle">
-              Табы при помощи псевдоэлемента :target - второй способ (не кросбраузерно)
-            </h6>
-            <div class="tab-target-tabs">
-              <div id="content-1">
-                Содержимое 1...
-              </div>
-              <div id="content-2">
-                Содержимое 2...
-              </div>
-              <div id="content-3">
-                Содержимое 3...
-              </div>
-              <div class="tab-target-tabs__links">
-                <a href="#content-1">Вкладка 1</a>
-                <a href="#content-2">Вкладка 2</a>
-                <a href="#content-3">Вкладка 3</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="details">
-            <h6 class="subtitle">
-              Табы при помощи новых тегов details и summary
-            </h6>
-            <details>
-              <summary>Details</summary>
-              Something small enough to escape casual notice.
-            </details>
-            <details open>
-              <summary>Even more details</summary>
-              <p>Here are even more details about the details.</p>
-            </details>
-          </div>
-
-          <div class="tabs-css">
-            <h6 class="subtitle">
-              Табы при помощи :checked - css
-            </h6> 
-            <div class="tabs-css-tabs">
-              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-1" value="" checked>
-              <label for="tabs-css-tab-btn-1">Вкладка 1</label>
-              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-2" value="">
-              <label for="tabs-css-tab-btn-2">Вкладка 2</label>
-              <input type="radio" name="tabs-css-tab-btn" id="tabs-css-tab-btn-3" value="">
-              <label for="tabs-css-tab-btn-3">Вкладка 3</label>
-              <div id="tabs-css-content-1">
-                Содержимое 1...
-              </div>
-              <div id="tabs-css-content-2">
-                Содержимое 2...
-              </div>
-              <div id="tabs-css-content-3">
-                Содержимое 3...
-              </div>
-            </div>
-          </div>
-
-          <div class="tabs-js">
-            <h6 class="subtitle">
-              Табы при помощи js 
-            </h6>
-            
-            <div class="tabs">
-              <div class="tabs__nav">
-                <button class="tabs__btn tabs__btn_active">Вкладка 1</button>
-                <button class="tabs__btn">Вкладка 2</button>
-                <button class="tabs__btn">Вкладка 3</button>
-              </div>
-              <div class="tabs__content">
-                <div class="tabs__pane tabs__pane_show">
-                  Содержимое 1...
-                </div>
-                <div class="tabs__pane">
-                  Содержимое 2...
-                </div>
-                <div class="tabs__pane" id="content-3">
-                  Содержимое 3...
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-      </div>
-      <div class="contacts" id="contacts">
-       <div class="container">
-        <h3 class="title">contacts</h3>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-        </p>
-        <div class="video-box">
-            <div class="plyr__video-embed" id="player">
-              <iframe
-                src="https://www.youtube.com/watch?v=x55lAlFtXmw&ab_channel=Ubisoft"
-                allowfullscreen
-                allowtransparency
-              ></iframe>
+        <div class="portfolio" id="portfolio">
+          <div class="container">
+            <h3 class="title">portfolio</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe.
+            </p>
+            <div class="tab-content">
+              <h6 class="subtitle">
+                Табы при помощи псевдоэлемента :target - первый способ (не
+                кросбраузерно)
+              </h6>
+              <div class="content-tabs">
+                <nav class="content-tabs__items">
+                  <a href="#tab" class="content-tabs__item"> Первая вкладка </a>
+                  <a href="#tab_02" class="content-tabs__item">
+                    Вторая вкладка
+                  </a>
+                  <a href="#tab_03" class="content-tabs__item">
+                    Третья вкладка
+                  </a>
+                </nav>
+                <div class="content-tabs__body">
+                  <div id="tab" class="content-tabs__block">
+                    <p class="text">Первая вкладка</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error provident laudantium delectus obcaecati! Quo
+                      repellendus in ab impedit provident. Deleniti voluptatem
+                      magni eum nobis eaque iure quae aliquam adipisci nam.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Labore nobis placeat quis fugiat consectetur et ducimus
+                      voluptatem voluptatum sunt nihil officia tenetur fugit,
+                      esse libero aspernatur iste possimus nisi. Voluptatibus.
+                    </p>
+                  </div>
+                  <div id="tab_02" class="content-tabs__block">
+                    <p class="text">Вторая вкладка</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error provident laudantium delectus obcaecati! Quo
+                      repellendus in ab impedit provident. Deleniti voluptatem
+                      magni eum nobis eaque iure quae aliquam adipisci nam.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Magni non at rem dignissimos eum quasi ipsa minima
+                      aperiam. Aliquid tempora reiciendis accusantium impedit
+                      consequatur, nam placeat quae? Eos, vitae et!
+                    </p>
+                  </div>
+                  <div id="tab_03" class="content-tabs__block">
+                    <p class="text">Третья вкладка</p>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Error provident laudantium delectus obcaecati! Quo
+                      repellendus in ab impedit provident. Deleniti voluptatem
+                      magni eum nobis eaque iure quae aliquam adipisci nam.
+                    </p>
+                  </div>
+                </div>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque ex fugiat eligendi, voluptas atque iure laudantium,
+                  autem sapiente consequuntur dicta, ab quod inventore. At
+                  cumque maxime sequi, debitis non saepe.
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="video-box">
-          
-        </div>
 
-        <p class="contacts__text text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex fugiat eligendi, voluptas atque iure laudantium, autem sapiente consequuntur dicta, ab quod inventore. At cumque maxime sequi, debitis non saepe.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nulla nihil. Reprehenderit blanditiis exercitationem saepe at sapiente explicabo vitae cum, ab eaque! Totam, enim repudiandae quos sapiente tenetur itaque labore!
-          Temporibus itaque deserunt maiores officiis suscipit odio magnam voluptas quidem, excepturi recusandae blanditiis debitis numquam expedita commodi iusto similique maxime illum perferendis provident! Voluptatum repellat obcaecati quis error, architecto nulla.
-          Laborum cum enim ipsa corrupti eveniet, totam vel voluptatibus. Eos, quas! Nisi dolor nemo, molestias minima omnis, reprehenderit deleniti veritatis illum, sint harum asperiores architecto sit autem provident! Quibusdam, deserunt!
-          Rerum voluptas, nostrum debitis, sunt possimus enim explicabo eius obcaecati minima molestiae hic assumenda mollitia quia amet tenetur. Aperiam deleniti neque corporis omnis aliquid atque obcaecati quisquam. Molestias, explicabo autem!
-          Illum quas ipsam sint id nesciunt obcaecati nam quos consequuntur molestias nulla porro iste dolorem adipisci eum exercitationem corrupti voluptas labore alias doloribus eaque, totam dolores. Optio mollitia odio repellat.
-        </p>
-        <div class="contacts__btn">
-          смотреть ещё...
-        </div>
-       </div>
-      </div>
+            <div class="tab-target">
+              <h6 class="subtitle">
+                Табы при помощи псевдоэлемента :target - второй способ (не
+                кросбраузерно)
+              </h6>
+              <div class="tab-target-tabs">
+                <div id="content-1">Содержимое 1...</div>
+                <div id="content-2">Содержимое 2...</div>
+                <div id="content-3">Содержимое 3...</div>
+                <div class="tab-target-tabs__links">
+                  <a href="#content-1">Вкладка 1</a>
+                  <a href="#content-2">Вкладка 2</a>
+                  <a href="#content-3">Вкладка 3</a>
+                </div>
+              </div>
+            </div>
 
-      <a class="go_top" href="#header">
-        <img src="./assets/img/up-arrow.svg" alt="go-top arrows">
-      </a>    
+            <div class="details">
+              <h6 class="subtitle">
+                Табы при помощи новых тегов details и summary
+              </h6>
+              <details>
+                <summary>Details</summary>
+                Something small enough to escape casual notice.
+              </details>
+              <details open>
+                <summary>Even more details</summary>
+                <p>Here are even more details about the details.</p>
+              </details>
+            </div>
 
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <p>footer</p>
-        <div class="footer_btn btn">
-          <span>Кнопка</span>
-        </div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum quae recusandae dolor non id. Optio ratione atque nisi omnis, necessitatibus natus dolore totam minima reiciendis aliquam beatae architecto laboriosam.
-        </p>
-        <div class="footer__wrap">
-          <div class="footer_box lesson">
-            <div class="footer_btn button">
-              <span>Кнопка, которая считает себя не такой как все</span>
+            <div class="tabs-css">
+              <h6 class="subtitle">Табы при помощи :checked - css</h6>
+              <div class="tabs-css-tabs">
+                <input
+                  type="radio"
+                  name="tabs-css-tab-btn"
+                  id="tabs-css-tab-btn-1"
+                  value=""
+                  checked
+                />
+                <label for="tabs-css-tab-btn-1">Вкладка 1</label>
+                <input
+                  type="radio"
+                  name="tabs-css-tab-btn"
+                  id="tabs-css-tab-btn-2"
+                  value=""
+                />
+                <label for="tabs-css-tab-btn-2">Вкладка 2</label>
+                <input
+                  type="radio"
+                  name="tabs-css-tab-btn"
+                  id="tabs-css-tab-btn-3"
+                  value=""
+                />
+                <label for="tabs-css-tab-btn-3">Вкладка 3</label>
+                <div id="tabs-css-content-1">Содержимое 1...</div>
+                <div id="tabs-css-content-2">Содержимое 2...</div>
+                <div id="tabs-css-content-3">Содержимое 3...</div>
+              </div>
             </div>
-            <div class="footer_btn button">
-              <span>Кнопка</span>
+
+            <div class="tabs-js">
+              <h6 class="subtitle">Табы при помощи js</h6>
+
+              <div class="tabs">
+                <div class="tabs__nav">
+                  <button class="tabs__btn tabs__btn_active">Вкладка 1</button>
+                  <button class="tabs__btn">Вкладка 2</button>
+                  <button class="tabs__btn">Вкладка 3</button>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__pane tabs__pane_show">Содержимое 1...</div>
+                  <div class="tabs__pane">Содержимое 2...</div>
+                  <div class="tabs__pane" id="content-3">Содержимое 3...</div>
+                </div>
+              </div>
             </div>
-            <div class="footer_btn button">
-              <span>Кнопка</span>
-            </div>
-            <div class="footer_btn button">
-              <span>Кнопка</span>
-            </div>          
           </div>
-          <div class="footer__box">
-            <a href="https://www.google.ru/" class="footer__link link">
-              <span>Google</span>
-            </a>
-            <nav class="footer__menu menu">
-              <button type="button" class="menu__button">
-                <span>Открыть меню</span>
-                <span>Закрыть меню</span>
-              </button>
-              <ul hidden class="menu__list">
-                <li>
-                  <a href="#" class="menu__link">Пункт 1</a>
+        </div>
+        <div class="contacts" id="contacts">
+          <div class="container">
+            <h3 class="title">contacts</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe.
+            </p>
+            <div class="video-box">
+              <div class="plyr__video-embed" id="player">
+                <iframe
+                  src="https://www.youtube.com/watch?v=x55lAlFtXmw&ab_channel=Ubisoft"
+                  allowfullscreen
+                  allowtransparency
+                ></iframe>
+              </div>
+            </div>
+            <div class="video-box"></div>
+
+            <p class="contacts__text text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ex
+              fugiat eligendi, voluptas atque iure laudantium, autem sapiente
+              consequuntur dicta, ab quod inventore. At cumque maxime sequi,
+              debitis non saepe. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Tenetur, nulla nihil. Reprehenderit blanditiis
+              exercitationem saepe at sapiente explicabo vitae cum, ab eaque!
+              Totam, enim repudiandae quos sapiente tenetur itaque labore!
+              Temporibus itaque deserunt maiores officiis suscipit odio magnam
+              voluptas quidem, excepturi recusandae blanditiis debitis numquam
+              expedita commodi iusto similique maxime illum perferendis
+              provident! Voluptatum repellat obcaecati quis error, architecto
+              nulla. Laborum cum enim ipsa corrupti eveniet, totam vel
+              voluptatibus. Eos, quas! Nisi dolor nemo, molestias minima omnis,
+              reprehenderit deleniti veritatis illum, sint harum asperiores
+              architecto sit autem provident! Quibusdam, deserunt! Rerum
+              voluptas, nostrum debitis, sunt possimus enim explicabo eius
+              obcaecati minima molestiae hic assumenda mollitia quia amet
+              tenetur. Aperiam deleniti neque corporis omnis aliquid atque
+              obcaecati quisquam. Molestias, explicabo autem! Illum quas ipsam
+              sint id nesciunt obcaecati nam quos consequuntur molestias nulla
+              porro iste dolorem adipisci eum exercitationem corrupti voluptas
+              labore alias doloribus eaque, totam dolores. Optio mollitia odio
+              repellat.
+            </p>
+            <div class="contacts__btn">смотреть ещё...</div>
+            <div class="contacts__box">
+              <p class="text">Маска ввода телефонного номера</p>
+              <ul class="contacts__mask">
+                <li class="contacts__item">
+                  <!--HTML элемент, который будет иметь заполнитель дд.мм.гггг -->
+                  <h6 class="subtitle">Заполнитель дд.мм.гггг</h6>
+                  <input id="date" type="text" />
+                </li>
+                <li class="contacts__item">
+                  <!--HTML элемент, который будет иметь в качестве заполнителя пробел -->
+                  <h6 class="subtitle">В качестве заполнителя пробел</h6>
+                  <input id="index" type="text" />
+                </li>
+                <li class="contacts__item">
+                  <!-- Ввод номера телефона осуществляется с помощью маски  -->
+                  <h6 class="subtitle">
+                    Ввод номера телефона осуществляется с помощью маски
+                  </h6>
+                  <input id="phone1" type="text" />
+                </li>
+                <li class="contacts__item">
+                  <!-- Ввод номера телефона осуществляется с помощью маски  -->
+                  <h6 class="subtitle">
+                    Ввод числа осуществляется с помощью маски
+                  </h6>
+                  <input id="number" type="text" />
                 </li>
                 <li>
-                  <a href="#" class="menu__link">Пункт 2</a>
-                </li>
-                <li>
-                  <a href="#" class="menu__link">Пункт 3</a>
-                </li>
-                <li>
-                  <a href="#" class="menu__link">Пункт 4</a>
+                  <div class="form-group">
+                    <label for="phone">Телефон: </label>
+                    <select id="country" class="form-control">
+                      <option value="ru"><img src="" />Россия +7</option>
+                      <option value="ua">Украина +380</option>
+                      <option value="by">Беларусь +375</option>
+                    </select>
+                    <input id="phone" type="text" class="form-control" />
+                  </div>
                 </li>
               </ul>
-            </nav>
-            <div class="block-for-mouse">
             </div>
-          </div>          
-        </div>
-        <div class="key">
-          <p class="text">
-            Счетчик символов
-          </p>
-          <div class="textarea">
-            <textarea class="textarea__item" autocomplete="off" maxlength="30" name="form[]" rows="10" cols="45" name="text"></textarea>
-            <div class="textarea__couter">Осталось <span></span> символов</div> 
           </div>
         </div>
-      </div>
-    </footer> 
-  </div>
-  
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
-<script src="./assets/js/main.js"></script> 
-</body>
+        <a class="go_top" href="#header">
+          <img src="./assets/img/up-arrow.svg" alt="go-top arrows" />
+        </a>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <p>footer</p>
+          <div class="footer_btn btn">
+            <span>Кнопка</span>
+          </div>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum
+            quae recusandae dolor non id. Optio ratione atque nisi omnis,
+            necessitatibus natus dolore totam minima reiciendis aliquam beatae
+            architecto laboriosam.
+          </p>
+          <div class="footer__wrap">
+            <div class="footer_box lesson">
+              <div class="footer_btn button">
+                <span>Кнопка, которая считает себя не такой как все</span>
+              </div>
+              <div class="footer_btn button">
+                <span>Кнопка</span>
+              </div>
+              <div class="footer_btn button">
+                <span>Кнопка</span>
+              </div>
+              <div class="footer_btn button">
+                <span>Кнопка</span>
+              </div>
+            </div>
+            <div class="footer__box">
+              <a href="https://www.google.ru/" class="footer__link link">
+                <span>Google</span>
+              </a>
+              <nav class="footer__menu menu">
+                <button type="button" class="menu__button">
+                  <span>Открыть меню</span>
+                  <span>Закрыть меню</span>
+                </button>
+                <ul hidden class="menu__list">
+                  <li>
+                    <a href="#" class="menu__link">Пункт 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__link">Пункт 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__link">Пункт 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__link">Пункт 4</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="block-for-mouse"></div>
+            </div>
+          </div>
+          <div class="key">
+            <p class="text">Счетчик символов</p>
+            <div class="textarea">
+              <textarea
+                class="textarea__item"
+                autocomplete="off"
+                maxlength="30"
+                name="form[]"
+                rows="10"
+                cols="45"
+                name="text"
+              ></textarea>
+              <div class="textarea__couter">
+                Осталось <span></span> символов
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    ></script>
+    <script src="./assets/libr/jquery.maskedinput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>

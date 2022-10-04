@@ -1000,3 +1000,11 @@ details[open] summary {
   background-color: rgb(116, 221, 116);
   
 }
+
+.contacts__mask {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__item .subtitle {
+  text-align: left;
+}

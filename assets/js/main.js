@@ -419,3 +419,107 @@ function txtSetCounter() {
   const txtCounterResult = txtItemLimit - txtItem.value.length;
   txtCounter.innerHTML = txtCounterResult;
 }
+
+/*
+Создания маски ввода осушествляется в js коде с помощью следующих знаков:
+
+Цифра 9 – соответствует цифре от 0 до 9.
+Символ a – представляет собой любой английский символ (A-Z, a-z).
+Знак * - представляет собой любой алфавитно-цифровой символ (A-Z, a-z, 0-9).
+*/
+//Код jQuery, установливающий маску для ввода телефона элементу input
+$(function() {
+  //задание заполнителя с помощью параметра placeholder
+  $("#date").mask("99.99.9999", {placeholder: "дд.мм.гггг" });
+  //задание заполнителя с помощью параметра placeholder
+  $("#index").mask("999999", {placeholder: " " });
+  //Использование параметра completed
+  $("#phone1").mask("8(999) 999-99-99", {
+    //completed: function(){ alert("Вы ввели номер: " + this.val()); }
+  });
+  /*
+  знак '?'. Этот знак является специальным символом, 
+  после которого необходимо разместить часть маски 
+  необязательной для заполнения.
+  */
+  //создания своего специального символа для маски
+  $("#number").mask("0.9?9");
+
+  $(function() {
+    function maskPhone() {
+      var country = $('#country option:selected').val();
+      switch (country) {
+        case "ru":
+          $("#phone").mask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#phone").mask("+380(99) 999-99-99");
+          break;
+        case "by":
+          $("#phone").mask("+375(99) 999-99-99");
+          break;          
+      }    
+    }
+    maskPhone();
+    $('#country').change(function() {
+      maskPhone();
+    });
+  });
+});
+
+
+
+//----------------BOM----------------------
+
+//Navigator
+/*
+обьект Navigator дает информацию о самом 
+браузере и операционой системе
+*/
+
+//Браузер
+console.log(navigator.userAgent);
+
+if (navigator.userAgent.includes("Chrome")) {
+  console.log('Браузер Хром');
+}else if (navigator.userAgent.includes("Firefox")) {
+  console.log('Браузер Firefox');
+}
+//Платформа
+console.log(navigator.platform);
+
+
+//Location
+/*
+обьект Location дает текущий URL или меняет на новую страницу
+*/
+//Получаем URL
+console.log(location.href);
+//Меняем URL
+//location.href = "https://www.youtube.com/"
+
+
+//History
+/*
+обьект History позволяет управлять историей браузера,
+передвигаться по посещённым страницам
+*/
+//history.back();
+//history.forward();
+
+
+
+//DOM
+//Навигация по документу
+
+//Получаем обьект body
+const bodyElement = document.body;
+
+// Соседние и родительские узлы
+const previousSiblingNode = bodyElement.previousElementSibling;
+const nextSiblingNode = bodyElement.nextElementSibling;
+const parentNode = bodyElement.parentNode;
+
+console.log(previousSiblingNode);
+console.log(nextSiblingNode);
+console.log(parentNode);
