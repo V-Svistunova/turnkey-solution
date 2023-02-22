@@ -520,6 +520,82 @@ const previousSiblingNode = bodyElement.previousElementSibling;
 const nextSiblingNode = bodyElement.nextElementSibling;
 const parentNode = bodyElement.parentNode;
 
-console.log(previousSiblingNode);
-console.log(nextSiblingNode);
-console.log(parentNode);
+//closset ищет ближайшего предка - возращает либо предка или null.
+  //когда метод parentElement - возращает родителя.
+/*  const elem = document.querySelector('.contacts__item');
+  const parentList = elem.closest('.contacts');
+  elem.parentElement
+  console.log(parentList); */
+// метод matches - проверяет true или false 
+/*  const elems = document.querySelectorAll('.contacts__item')
+  for (let elem of elems) {
+    if (elem.matches('[class$="contacts__item--active"]')) {
+      console.log('есть актив');
+    } else {
+      console.log('no актив');
+    }
+  }*/
+
+// Изменение документа
+//Содержимое элемента innerHTML
+/*
+const textElement = document.querySelector('.text-test');
+// получаю содержимое обьекта
+const textTestContent = textElement.innerHTML;
+// дописываю содержимое обьекта
+textTest.innerHTML = 
+`<div>${textTestContent}</div>
+<div class="subtitle">
+Эта строка добавлена с помощью js.
+</div>
+`;
+//Создание нового элемента(тега)
+const newElement = document.createElement('div');
+//Наполняем новый элемент
+newElement.innerHTML = 
+`
+<span>новый элемент</span>
+`;
+*/
+//Вставляем новый элемент
+//...перед обьектом
+//textElement.after(newElement);
+//внутрь и в начало обьекта
+//textElement.prepend(newElement);
+//...внутрь и в конце обьекта
+//textElement.append(newElement);
+
+//Вставляем текст, HTML, элемент
+/* textElement.insertAdjacentHTML(
+  'beforeend',
+  `
+  <span>new элемент </span>
+  `
+); */
+/*
+'afterend' - вставить html непосредственно после textElement 
+'beforebegin' - вставить html непосредственно перед textElement
+'afterend' - вставить html в начало содержимого textElement
+'beforeend' - вставить html в конец содержимого textElement
+*/
+
+//Перенос элемента
+/* const textElement_1 = document.querySelector('.text-test-1'); 
+ const subtitle = document.querySelector('.subtitle-test');
+
+ console.log(textElement_1);
+ textElement_1.append(subtitle);*/
+// Вставить копию обьекта
+/*const textElement = document.querySelector('.text-test');
+//клонирование без дочерних элементов
+//const cloneTextElement = textElement.cloneNode();
+//Глубокое клонирование вместе с содержимым
+const cloneTextElement = textElement.cloneNode(true);
+
+const block = document.querySelector('.home');
+
+block.append(cloneTextElement);*/
+//удалить обьект
+/*const textElement = document.querySelector('.text-test');
+textElement.remove();
+*/

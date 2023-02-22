@@ -1008,3 +1008,147 @@ details[open] summary {
 .contacts__item .subtitle {
   text-align: left;
 }
+
+
+
+/* table */
+
+.tariffs {
+  margin: 40px 0 64px;
+}
+
+.tariffs__table tbody tr td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tariffs__table thead tr th {
+  display: flex;
+  align-items: center;
+}
+.tariffs__table tbody tr td:first-child {
+  position: relative;
+}
+.tariffs__table tbody tr td:first-child::before {
+  position: absolute;
+  top: -75px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  content: attr(data-tooltip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  font-family: 'TT Norms';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 8px 8px 0 0;
+}
+
+.tariffs__table tbody tr .tariffs__td-1:first-child::before {
+  background: rgba(220, 48, 111, 1);
+  border: 3px solid #DC306F;
+  left: -3px;
+  right: -3px;
+  width: calc(100% + 6px);
+}
+.tariffs__table tbody tr .tariffs__td-2:first-child::before {
+  background: rgba(32, 127, 169, 1);
+}
+.tariffs__table tbody tr .tariffs__td-3:first-child::before {
+  background: rgba(74, 174, 218, 1);
+}
+
+.tariffs__tr-1 {
+  border: 3px solid #DC306F;
+}
+
+.rtable {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.rtable,
+.rtable--flip tbody {
+
+}
+
+.rtable td:first-child,
+.rtable--flip tbody tr:first-child {
+
+}
+
+.rtable td:last-child,
+.rtable--flip tbody tr:last-child {
+
+}
+
+.rtable th {
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  background: #f2f0e6;
+  max-width: 420px;
+  white-space: initial;
+}
+
+.rtable th,
+.rtable td {
+  padding: 6px 12px;
+  border: 1px solid #d9d7ce;
+  min-height: 65px;
+}
+
+.rtable--flip {
+  display: flex;
+  overflow: hidden;
+  background: none;
+  text-align: center;
+}
+
+.rtable--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+  padding-top: 75px;
+}
+
+.rtable--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 75px;
+}
+
+.rtable--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.rtable--flip td,
+.rtable--flip th {
+  display: block;
+}
+
+.rtable--flip td {
+  border-left: 0;
+}
+
+
+.rtable--flip th:not(:last-child),
+.rtable--flip td:not(:last-child) {
+  border-bottom: 0;
+}
+
